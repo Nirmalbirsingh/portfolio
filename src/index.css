@@ -148,3 +148,14 @@ body::before {
 .pulse-dot--orange {
   background: var(--accent);
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+    margin-bottom: 2.5rem;
+  }
+}

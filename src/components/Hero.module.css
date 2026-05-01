@@ -246,3 +246,42 @@
 .ctaBtn:hover .ctaBtnBg {
   transform: translateX(0);
 }
+
+@media (max-width: 768px) {
+  .headlineWrap {
+    padding: 0 1.25rem;
+  }
+
+  .availability {
+    left: 1.25rem;
+    top: 80px;
+    font-size: 10px;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+
+  .watermark {
+    font-size: clamp(80px, 28vw, 140px);
+  }
+
+  .strip {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.25rem;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .stats {
+    justify-content: flex-start;
+  }
+
+  .ctaWrap {
+    justify-content: flex-start;
+  }
+
+  .desc {
+    max-width: 100%;
+  }
+}

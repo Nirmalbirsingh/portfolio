@@ -73,3 +73,13 @@
 .cta:hover {
   opacity: 0.88;
 }
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 1.25rem;
+  }
+
+  .links {
+    display: none;
+  }
+}

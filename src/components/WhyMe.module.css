@@ -44,3 +44,14 @@
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.7);
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.25rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

@@ -110,3 +110,27 @@
   transition: color 0.25s;
   flex-shrink: 0;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .headline {
+    font-size: clamp(2rem, 8vw, 3rem);
+    margin-bottom: 2.5rem;
+  }
+
+  .lower {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .desc {
+    max-width: 100%;
+  }
+
+  .contactLink:hover {
+    padding-left: 1.25rem;
+  }
+}

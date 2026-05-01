@@ -92,3 +92,18 @@
 .checkText {
   flex: 1;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.25rem;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .headline {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+}
