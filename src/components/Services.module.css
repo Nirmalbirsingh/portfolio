@@ -1,0 +1,95 @@
+.section {
+  padding: 7rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border-strong);
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+  margin-top: 1rem;
+}
+
+.card {
+  position: relative;
+  background: var(--white);
+  padding: 3rem;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.card:hover {
+  background: var(--accent-light);
+}
+
+/* Mouse-tracking glow */
+.glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    400px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 92, 0, 0.06),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover .glow {
+  opacity: 1;
+}
+
+.num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 4vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--muted-deco);
+  margin-bottom: 1.5rem;
+  transition: color 0.3s;
+}
+
+.card:hover .num {
+  color: var(--accent);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+}
+
+.cardDesc {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border-strong);
+  padding: 0.3rem 0.65rem;
+  border-radius: 2px;
+}

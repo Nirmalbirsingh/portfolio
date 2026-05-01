@@ -1,0 +1,26 @@
+.footer {
+  background: var(--white);
+  border-top: 1px solid var(--border-strong);
+  padding: 1.75rem 2.5rem;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.left,
+.right {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.accent {
+  color: var(--accent);
+}

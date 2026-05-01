@@ -1,0 +1,70 @@
+.section {
+  background: var(--surface);
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.rowWrap {
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  padding-right: 1rem;
+  animation: scroll-fwd 25s linear infinite;
+}
+
+.rowReverse {
+  animation: scroll-rev 25s linear infinite;
+}
+
+@keyframes scroll-fwd {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
+}
+
+@keyframes scroll-rev {
+  from { transform: translateX(-25%); }
+  to   { transform: translateX(0); }
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  background: var(--white);
+  border: 1.5px solid var(--border-strong);
+  padding: 0.5rem 1.1rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.pill:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.pill:hover .dot {
+  background: var(--accent) !important;
+}

@@ -1,0 +1,139 @@
+.section {
+  padding: 7rem 0;
+}
+
+.list {
+  border-top: 1.5px solid var(--border-strong);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 5rem 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-bottom: 1.5px solid var(--border-strong);
+  padding-left: 0;
+  transition: padding-left 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s;
+  border-radius: 2px;
+}
+
+.row:hover {
+  padding-left: 1.5rem;
+  background: var(--white);
+}
+
+.num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 4vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--muted-deco);
+  transition: color 0.3s;
+  align-self: center;
+}
+
+.row:hover .num {
+  color: var(--accent);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+  transition: color 0.3s;
+}
+
+.row:hover .name {
+  color: var(--accent);
+}
+
+.desc {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 600px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border-strong);
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+}
+
+.statusWrap {
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.statusBuilding {
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid rgba(255, 92, 0, 0.2);
+}
+
+.statusOpen {
+  color: var(--green);
+  background: var(--green-bg);
+  border: 1px solid rgba(0, 168, 90, 0.2);
+}
+
+.statusLive {
+  color: var(--green);
+  background: var(--green-bg);
+  border: 1px solid rgba(0, 168, 90, 0.2);
+}
+
+.rowLink {
+  display: grid;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
