@@ -105,8 +105,10 @@
 }
 
 .arrow {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--muted);
+  font-family: var(--font-body);
+  font-style: normal;
   transition: color 0.25s;
   flex-shrink: 0;
 }

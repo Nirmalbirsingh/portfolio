@@ -39,7 +39,7 @@ export default function Contact() {
                   <span className={styles.linkType}>{l.type}</span>
                   <span className={styles.linkValue}>{l.value}</span>
                 </div>
-                <span className={styles.arrow}>↗</span>
+                <span className={styles.arrow} aria-hidden="true">&#x2197;&#xFE0E;</span>
               </a>
             ))}
           </div>
