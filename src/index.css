@@ -12,12 +12,27 @@
   --accent-light: #fff0e8;
   --green: #00a85a;
   --green-bg: rgba(0, 168, 90, 0.08);
+  --nav-bg: rgba(247, 243, 238, 0.88);
 
   --font-display: 'Syne', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
   --font-body: 'Outfit', sans-serif;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  --bg: #0d0d0d;
+  --surface: #161616;
+  --white: #0d0d0d;
+  --ink: #f0ece6;
+  --muted: #6b6560;
+  --muted-deco: #2a2620;
+  --border: rgba(255, 255, 255, 0.07);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --accent-light: #2a1500;
+  --green-bg: rgba(0, 168, 90, 0.12);
+  --nav-bg: rgba(13, 13, 13, 0.88);
 }
 
 /* ─── Reset ─── */
