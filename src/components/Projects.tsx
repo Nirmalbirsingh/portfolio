@@ -61,7 +61,7 @@ export default function Projects() {
               </div>
             ))}
           </div>
-          <a href="https://doublegreen.ca/" target="_blank" rel="noreferrer" className="btn btn-primary">
+          <a href="https://doublegreen.ca/" target="_blank" rel="noreferrer" className="btn btn-dark">
             Visit doublegreen.ca <span className="arrow" aria-hidden>↗&#xFE0E;</span>
           </a>
         </article>

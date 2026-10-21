@@ -22,7 +22,7 @@ export default function Hero() {
           <a href="#contact" className="btn btn-primary">
             Get a free quote
           </a>
-          <a href="#work" className="btn btn-ghost">
+          <a href="#work" className="btn btn-outline-light">
             See my work
           </a>
         </div>

@@ -7,11 +7,11 @@ const links = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section dark">
       <div className="container contact">
         <div className="reveal">
           <p className="eyebrow">Contact</p>
-          <h2 className="h2">Got a project? Let’s talk.</h2>
+          <h2 className="h2">Got a project? <em>Let’s talk.</em></h2>
           <p className="lead">
             Based in Surrey, BC. I work with small businesses across the Lower
             Mainland, and remotely with clients anywhere. Tell me about your
