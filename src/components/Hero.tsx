@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="container">
         <p className="badge">
           <span className="dot" aria-hidden />
-          Web designer in Surrey, BC · Taking new projects
+          Web designer in Surrey, BC<span className="badge-extra"> · Taking new projects</span>
         </p>
 
         <h1 className="h1">

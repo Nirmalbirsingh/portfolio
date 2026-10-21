@@ -25,7 +25,7 @@
 
   --max: 1120px;
   --gutter: 2rem;
-  --section: 8rem;
+  --section: 6.5rem;
   --radius: 14px;
   --nav-h: 60px;
 }
@@ -104,7 +104,7 @@ ul, ol {
   justify-content: space-between;
   align-items: flex-end;
   gap: 2rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 /* ─── Type ─── */
@@ -287,7 +287,7 @@ a:hover > .arrow {
 
 /* ─── Hero ─── */
 .hero {
-  padding: calc(var(--nav-h) + 7rem) 0 6rem;
+  padding: calc(var(--nav-h) + 6rem) 0 5rem;
   background:
     radial-gradient(60rem 30rem at 85% -10%, rgba(233, 161, 59, 0.16), transparent 60%),
     var(--black);
@@ -358,7 +358,7 @@ a:hover > .arrow {
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 5.5rem;
+  margin-top: 4.5rem;
   border-top: 1px solid var(--line);
 }
 
@@ -447,7 +447,7 @@ a:hover > .arrow {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .case-top {
@@ -455,7 +455,7 @@ a:hover > .arrow {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .case-kind {
@@ -478,7 +478,7 @@ a:hover > .arrow {
   gap: 2.5rem;
   padding-top: 2rem;
   border-top: 1px solid var(--line);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .case-label {
@@ -519,7 +519,7 @@ a:hover > .arrow {
   grid-template-columns: 1fr auto;
   gap: 1.5rem;
   align-items: center;
-  padding: 1.75rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--line);
   transition: opacity 0.2s;
 }
@@ -567,7 +567,11 @@ a.row:active {
 }
 
 .step .num {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.step .h3 {
+  margin-bottom: 0.4rem;
 }
 
 .step p {
@@ -593,6 +597,7 @@ a.row:active {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   gap: 1.25rem;
 }
 
@@ -628,7 +633,7 @@ a.row:active {
 }
 
 .price-main .btn {
-  margin-top: auto;
+  margin-top: 0.75rem;
 }
 
 .includes {
@@ -672,6 +677,7 @@ a.row:active {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  align-items: start;
 }
 
 .about-body p {
@@ -870,13 +876,13 @@ details[open] .plus::after {
 }
 
 /* ─── Scroll reveal (subtle) ─── */
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.reveal.visible {
+.js .reveal.visible {
   opacity: 1;
   transform: none;
 }
@@ -910,7 +916,7 @@ details[open] .plus::after {
 @media (max-width: 720px) {
   :root {
     --gutter: 1.25rem;
-    --section: 5rem;
+    --section: 4.25rem;
   }
 
   .nav-links {
@@ -925,17 +931,67 @@ details[open] .plus::after {
     flex: 1 1 auto;
   }
 
-  .stats {
-    grid-template-columns: 1fr 1fr;
-    margin-top: 3.5rem;
+  .badge {
+    font-size: 0.8125rem;
+    margin-bottom: 1.5rem;
   }
 
-  .stat:nth-child(3) {
-    grid-column: 1 / -1;
-    padding-left: 0;
-    border-left: none;
-    border-top: 1px solid var(--line);
-    margin-top: 1.75rem;
+  .badge .badge-extra {
+    display: none;
+  }
+
+  .h1 {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero .lead {
+    margin-bottom: 2rem;
+  }
+
+  .stats {
+    margin-top: 3rem;
+  }
+
+  .stat + .stat {
+    padding-left: 1rem;
+  }
+
+  .stat-num {
+    font-size: 1.85rem;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+
+  .case-top {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .case-name {
+    font-size: 2.25rem;
+  }
+
+  .list-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .row-meta {
+    gap: 0.75rem;
+  }
+
+  .facts li {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .facts li span:last-child {
+    font-weight: 500;
   }
 
   .section-head {
@@ -953,11 +1009,20 @@ details[open] .plus::after {
   .case,
   .price-main,
   .includes {
-    padding: 1.75rem;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .service .num,
+  .num {
+    font-size: 2.25rem;
   }
 
   .service .num {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .steps {
+    gap: 2rem;
   }
 
   .case-steps {
@@ -984,7 +1049,7 @@ details[open] .plus::after {
     scroll-behavior: auto;
   }
 
-  .reveal {
+  .js .reveal {
     transform: none;
     transition: opacity 0.25s ease;
   }

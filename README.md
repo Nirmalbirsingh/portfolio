@@ -1,6 +1,6 @@
 # Nirmal Bir Singh — Portfolio
 
-Personal portfolio site showcasing my work as a developer specialising in React, TypeScript, Swift, and SwiftUI.
+Portfolio and business site for my web design work: fast, mobile-friendly websites for small businesses in Surrey, BC.
 
 **Live:** [nirmalbirsingh.vercel.app](https://nirmalbirsingh.vercel.app)
 
@@ -10,8 +10,8 @@ Personal portfolio site showcasing my work as a developer specialising in React,
 
 - React 19 + TypeScript 6
 - Vite 8
-- CSS Modules + CSS Variables
-- EmailJS (contact form)
+- One global stylesheet with CSS variables (Outfit + Manrope, single amber accent)
+- Build-time pre-rendering for SEO (`scripts/prerender.mjs`)
 
 ## Run locally
 
