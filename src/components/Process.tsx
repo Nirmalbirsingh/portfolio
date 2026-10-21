@@ -1,5 +1,3 @@
-import styles from './Process.module.css';
-
 const steps = [
   { title: 'Chat', desc: 'Tell me about your business and what you need. No pressure, no jargon.' },
   { title: 'Design', desc: 'You see the design before anything is built, and we tweak it until it feels right.' },
@@ -9,16 +7,20 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className={styles.section}>
+    <section id="process" className="section">
       <div className="container">
-        <p className="section-label reveal">How it works</p>
-        <h2 className="section-title reveal">Simple process</h2>
-        <ol className={styles.grid}>
+        <div className="section-head reveal">
+          <div>
+            <p className="eyebrow">Process</p>
+            <h2 className="h2">Simple, from first chat to launch</h2>
+          </div>
+        </div>
+        <ol className="steps reveal">
           {steps.map((s, i) => (
-            <li key={s.title} className={`${styles.step} reveal`}>
-              <span className={styles.num} aria-hidden>{String(i + 1).padStart(2, '0')}</span>
-              <h3 className={styles.title}>{s.title}</h3>
-              <p className={styles.desc}>{s.desc}</p>
+            <li key={s.title} className="step">
+              <span className="num">{String(i + 1).padStart(2, '0')}</span>
+              <h3 className="h3">{s.title}</h3>
+              <p>{s.desc}</p>
             </li>
           ))}
         </ol>

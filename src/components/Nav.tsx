@@ -1,31 +1,25 @@
-import styles from './Nav.module.css';
-
 const links = [
+  { label: 'Work', id: 'work' },
   { label: 'Services', id: 'services' },
-  { label: 'Work', id: 'projects' },
   { label: 'Pricing', id: 'pricing' },
   { label: 'FAQ', id: 'faq' },
 ];
 
 export default function Nav() {
   return (
-    <nav className={styles.nav} aria-label="Main">
-      <div className={styles.inner}>
-        <a href="/" className={styles.logo} aria-label="Nirmal — home">
-          Nirmal<span className={styles.logoAccent}>.</span>
+    <nav className="nav" aria-label="Main">
+      <div className="container nav-inner">
+        <a href="/" className="logo" aria-label="Nirmal, home">
+          Nirmal<span>.</span>
         </a>
-
-        <ul className={styles.links}>
+        <ul className="nav-links">
           {links.map((l) => (
             <li key={l.id}>
-              <a href={`#${l.id}`} className={styles.link}>
-                {l.label}
-              </a>
+              <a href={`#${l.id}`}>{l.label}</a>
             </li>
           ))}
         </ul>
-
-        <a href="#contact" className={styles.cta}>
+        <a href="#contact" className="btn btn-primary btn-sm">
           Get a quote
         </a>
       </div>

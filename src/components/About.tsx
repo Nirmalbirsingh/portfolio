@@ -1,44 +1,37 @@
-import styles from './About.module.css';
-
-const checklist = [
-  'Mobile-first — looks right on every phone',
-  'Fast — pages load in a blink',
-  'Found on Google — local SEO built in',
-  'Accessible — easy for everyone to use',
-  'Clear communication — prompt replies, no jargon',
-  'Built from scratch — no cookie-cutter templates',
+const facts = [
+  ['Based in', 'Surrey, BC'],
+  ['Experience', '5+ years'],
+  ['Works with', 'Restaurants, shops, trades, food businesses'],
+  ['You deal with', 'Me, from first chat to launch'],
 ];
 
 export default function About() {
   return (
-    <section id="about" className={styles.section}>
-      <div className={styles.inner}>
-        <div className={styles.left}>
-          <h2 className={styles.headline}>
-            <span className={styles.hey}>Hey.</span> I'm Nirmal —
-            a Surrey-based web developer who cares about results, not just code.
-          </h2>
-          <p className={styles.body}>
-            I've spent the last <strong>5+ years</strong> building things for the web and
-            Apple platforms. My work sits at the intersection of{' '}
-            <strong>design and engineering</strong> — I care about how things look just as
-            much as how they perform.
-          </p>
-          <p className={styles.body} style={{ marginTop: '1rem' }}>
-            I work directly with small business owners — restaurants, shops,
-            trades, and food businesses — to build websites that make it easy
-            for customers to <strong>find you, trust you, and reach you</strong>.
-            You deal with me from the first chat to launch day and beyond.
-          </p>
+    <section id="about" className="section">
+      <div className="container about">
+        <div className="reveal">
+          <p className="eyebrow">About</p>
+          <h2 className="h2">Hi, I’m Nirmal.</h2>
         </div>
-
-        <div className={styles.right}>
-          {checklist.map((item, i) => (
-            <div key={i} className={styles.checkRow}>
-              <span className={styles.checkBox}>✓</span>
-              <span className={styles.checkText}>{item}</span>
-            </div>
-          ))}
+        <div className="about-body reveal">
+          <p>
+            I’m a Surrey-based web developer who cares about results, not just
+            code. I’ve spent the last 5+ years building for the web and Apple
+            platforms, and I care about how things look just as much as how
+            they perform.
+          </p>
+          <p>
+            I work directly with small business owners to build websites that
+            make it easy for customers to find you, trust you, and reach you.
+          </p>
+          <ul className="facts">
+            {facts.map(([k, v]) => (
+              <li key={k}>
+                <span>{k}</span>
+                <span>{v}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
