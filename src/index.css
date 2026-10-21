@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px; /* keep section tops clear of the fixed nav */
 }
 
 body {

@@ -3,7 +3,7 @@
 export const faqs = [
   {
     q: 'How much does a website cost?',
-    a: 'It depends on how many pages and features you need. You get a clear quote before any work starts — no surprise bills.',
+    a: 'Websites start at $899 CAD. The final price depends on how many pages and features you need, and you get a clear quote before any work starts — no surprise bills.',
   },
   {
     q: 'How long does it take?',

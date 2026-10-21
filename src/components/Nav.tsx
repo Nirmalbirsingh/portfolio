@@ -3,7 +3,7 @@ import styles from './Nav.module.css';
 const links = [
   { label: 'Services', id: 'services' },
   { label: 'Work', id: 'projects' },
-  { label: 'Process', id: 'process' },
+  { label: 'Pricing', id: 'pricing' },
   { label: 'FAQ', id: 'faq' },
 ];
 
