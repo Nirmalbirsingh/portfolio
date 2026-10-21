@@ -5,26 +5,26 @@ const cards = [
   {
     num: '01',
     title: 'Business Websites',
-    desc: 'Fast, modern websites built to convert visitors into customers. From landing pages to multi-page sites.',
-    tags: ['React', 'TypeScript', 'Vite', 'SEO'],
+    desc: 'A website that looks great on phones, loads fast, and makes it easy for customers to call, visit, or order.',
+    tags: ['Mobile-friendly', 'Fast loading', 'Click-to-call'],
   },
   {
     num: '02',
-    title: 'iOS & Watch Apps',
-    desc: 'Native Apple platform apps with polished UI, smooth animations, and deep system integration.',
-    tags: ['Swift', 'SwiftUI', 'watchOS', 'HealthKit'],
+    title: 'Get Found on Google',
+    desc: 'Local SEO so people searching “near me” in Surrey find you — Google-friendly pages, Maps, and help with your Business Profile.',
+    tags: ['Local SEO', 'Google Maps', 'Business Profile'],
   },
   {
     num: '03',
-    title: 'Front-End Dev',
-    desc: 'Pixel-perfect implementations of designs with attention to accessibility, motion, and detail.',
-    tags: ['HTML/CSS', 'JavaScript', 'Figma', 'Animations'],
+    title: 'Website Redesigns',
+    desc: 'Old, slow, or hard to use on a phone? I rebuild it with a modern look and keep everything that already works.',
+    tags: ['Modern design', 'Speed boost', 'Easy to update'],
   },
   {
     num: '04',
-    title: 'Performance & SEO',
-    desc: 'Audits, optimisation, and local SEO to make your site rank, load fast, and stay accessible.',
-    tags: ['Core Web Vitals', 'Local SEO', 'Accessibility'],
+    title: 'iOS & Watch Apps',
+    desc: 'Native iPhone and Apple Watch apps with a polished feel, for businesses and startups that need more than a website.',
+    tags: ['iPhone', 'Apple Watch', 'Swift'],
   },
 ];
 
@@ -74,7 +74,7 @@ export default function Services() {
   return (
     <section id="services" ref={sectionRef} className={styles.section}>
       <div className="container">
-        <p className={`section-label reveal`}>What I do</p>
+        <p className={`section-label reveal`}>How I can help</p>
         <h2 className={`section-title reveal`}>Services</h2>
       </div>
       <div className={styles.grid}>

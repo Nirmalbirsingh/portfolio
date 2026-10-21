@@ -1,12 +1,12 @@
 import styles from './About.module.css';
 
 const checklist = [
-  'React & TypeScript — production-ready code',
-  'Swift & SwiftUI — native Apple platform apps',
-  'Performance-first — Core Web Vitals green',
-  'Accessibility — WCAG AA compliant',
-  'SEO — structure, metadata, local signals',
-  'Communication — clear, prompt, no jargon',
+  'Mobile-first — looks right on every phone',
+  'Fast — pages load in a blink',
+  'Found on Google — local SEO built in',
+  'Accessible — easy for everyone to use',
+  'Clear communication — prompt replies, no jargon',
+  'Built from scratch — no cookie-cutter templates',
 ];
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
         <div className={styles.left}>
           <h2 className={styles.headline}>
             <span className={styles.hey}>Hey.</span> I'm Nirmal —
-            a developer who cares about results, not just code.
+            a Surrey-based web developer who cares about results, not just code.
           </h2>
           <p className={styles.body}>
             I've spent the last <strong>5+ years</strong> building things for the web and
@@ -25,9 +25,10 @@ export default function About() {
             much as how they perform.
           </p>
           <p className={styles.body} style={{ marginTop: '1rem' }}>
-            When I'm not building websites, I'm working on{' '}
-            <strong>native iOS and watchOS apps</strong>, exploring new web
-            technologies, or writing about performance and accessibility.
+            I work directly with small business owners — restaurants, shops,
+            trades, and food businesses — to build websites that make it easy
+            for customers to <strong>find you, trust you, and reach you</strong>.
+            You deal with me from the first chat to launch day and beyond.
           </p>
         </div>
 

@@ -17,7 +17,7 @@
   padding: 2.5rem 0;
   border-bottom: 1.5px solid var(--border-strong);
   padding-left: 0;
-  transition: padding-left 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s;
+  transition: padding-left 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s, transform 100ms ease-out;
   border-radius: 2px;
 }
 
@@ -138,7 +138,144 @@
   font: inherit;
 }
 
+/* ─── Case study ─── */
+.case {
+  background: var(--white);
+  border: 1.5px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.caseHead {
+  display: grid;
+  grid-template-columns: 5rem 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.caseNum {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 4vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+}
+
+.caseKind {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.caseName {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.caseSteps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.caseLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.caseText {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.caseFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 1.75rem;
+}
+
+.caseLink {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--ink);
+  padding: 0.85rem 1.4rem;
+  border-radius: 2px;
+  transition: background 0.2s, transform 100ms ease-out;
+}
+
+.caseLink:hover {
+  background: var(--accent);
+}
+
+.caseLink:active,
+.rowLink:active {
+  transform: scale(0.98);
+}
+
+.conceptNote {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  max-width: 640px;
+}
+
+.conceptNote strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.statusConcept {
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+}
+
 @media (max-width: 768px) {
+  .case {
+    padding: 1.5rem;
+  }
+
+  .caseHead {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .caseNum {
+    font-size: 2.2rem;
+  }
+
+  .caseSteps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+
   .section {
     padding: 4rem 0;
   }

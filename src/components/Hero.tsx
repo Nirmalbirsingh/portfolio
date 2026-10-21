@@ -2,15 +2,11 @@ import { useEffect, useRef } from 'react';
 import styles from './Hero.module.css';
 
 const words = [
-  { text: 'I', orange: false },
-  { text: 'build', orange: false },
-  { text: 'websites', orange: false },
-  { text: '&', orange: true },
-  { text: 'apps', orange: true },
+  { text: 'Websites', orange: false },
   { text: 'that', orange: false },
-  { text: 'do', orange: false },
-  { text: 'the', orange: false },
-  { text: 'job.', orange: true },
+  { text: 'bring', orange: false },
+  { text: 'you', orange: false },
+  { text: 'customers.', orange: true },
 ];
 
 function useCounter(target: number, suffix = '') {
@@ -24,6 +20,7 @@ function useCounter(target: number, suffix = '') {
       ([entry]) => {
         if (entry.isIntersecting && !started.current) {
           started.current = true;
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
           const start = performance.now();
           const duration = 1800;
           const step = (now: number) => {
@@ -55,12 +52,12 @@ export default function Hero() {
       <div className={styles.blobBL} aria-hidden />
 
       {/* Watermark */}
-      <div className={styles.watermark} aria-hidden>DEV</div>
+      <div className={styles.watermark} aria-hidden>WEB</div>
 
       {/* Top badges */}
       <div className={styles.availability}>
         <span className="pulse-dot" />
-        Available for new projects — 2026
+        Web designer in Surrey, BC · Taking new projects
       </div>
 
       <div className={styles.scrollIndicator} aria-hidden>
@@ -69,7 +66,8 @@ export default function Hero() {
       </div>
 
       {/* Headline */}
-      <div className={styles.headlineWrap}>
+      <h1 className={styles.headlineWrap}>
+        <span className={styles.srOnly}>Web design for small businesses in Surrey, BC — </span>
         {words.map((w, i) => (
           <span
             key={i}
@@ -83,24 +81,25 @@ export default function Hero() {
             </span>
           </span>
         ))}
-      </div>
+      </h1>
 
       {/* Bottom strip */}
       <div className={styles.strip}>
         <p className={styles.desc}>
-          I design and build fast, conversion-focused websites and apps for
-          businesses that want results — not excuses.
+          I design and build fast, mobile-friendly websites for small
+          businesses in Surrey and the Lower Mainland — so more people find
+          you, trust you, and get in touch.
         </p>
 
         <div className={styles.stats}>
           <div className={styles.stat}>
-            <span className={styles.statNum} ref={yearsRef}>0+</span>
+            <span className={styles.statNum} ref={yearsRef}>5+</span>
             <span className={styles.statLabel}>Years coding</span>
           </div>
           <div className={styles.statDivider} />
           <div className={styles.stat}>
-            <span className={styles.statNum} ref={lighthouseRef}>0</span>
-            <span className={styles.statLabel}>Lighthouse score</span>
+            <span className={styles.statNum} ref={lighthouseRef}>100</span>
+            <span className={styles.statLabel}>Google speed score</span>
           </div>
         </div>
 
@@ -110,7 +109,7 @@ export default function Hero() {
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             <span className={styles.ctaBtnBg} />
-            <span className={styles.ctaBtnText}>Start a project ↗</span>
+            <span className={styles.ctaBtnText}>Get a free quote ↗</span>
           </button>
         </div>
       </div>

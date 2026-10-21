@@ -74,6 +74,27 @@
   opacity: 0.88;
 }
 
+/* Instant press feedback */
+.cta,
+.link {
+  display: inline-block;
+}
+
+.cta:active,
+.link:active {
+  transform: scale(0.96);
+  transition: transform 100ms ease-out;
+}
+
+/* Frostier, solid bar when the user asks for less transparency */
+@media (prefers-reduced-transparency: reduce) {
+  .nav {
+    background: var(--bg);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
 @media (max-width: 768px) {
   .inner {
     padding: 0 1.25rem;

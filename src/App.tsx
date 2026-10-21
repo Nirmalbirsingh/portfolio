@@ -8,6 +8,8 @@ import Projects from './components/Projects';
 import WhyMe from './components/WhyMe';
 import About from './components/About';
 import Contact from './components/Contact';
+import Process from './components/Process';
+import Faq from './components/Faq';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -30,10 +32,12 @@ export default function App() {
         <Hero />
         <Ticker />
         <Services />
-        <Stack />
         <Projects />
+        <Process />
         <WhyMe />
         <About />
+        <Stack />
+        <Faq />
         <Contact />
       </main>
       <Footer />

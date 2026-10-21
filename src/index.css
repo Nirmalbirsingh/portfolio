@@ -159,3 +159,41 @@ body::before {
     margin-bottom: 2.5rem;
   }
 }
+
+/* ─── Press feedback: respond on pointer-down ─── */
+.contactLink {
+  transition: transform 100ms ease-out;
+}
+
+.contactLink:active {
+  transform: scale(0.985);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ─── Reduced motion: gentle cross-fades, no sliding or looping ─── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    transform: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .pulse-dot {
+    animation: none;
+  }
+}

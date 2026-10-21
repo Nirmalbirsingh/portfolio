@@ -106,7 +106,17 @@
 }
 
 /* ─── Headline ─── */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .headlineWrap {
+  font-weight: inherit;
   padding: 0 2.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -245,6 +255,15 @@
 
 .ctaBtn:hover .ctaBtnBg {
   transform: translateX(0);
+}
+
+/* Instant press feedback (pointer-down, not release) */
+.ctaBtn {
+  transition: transform 100ms ease-out;
+}
+
+.ctaBtn:active {
+  transform: scale(0.97);
 }
 
 @media (max-width: 768px) {

@@ -1,10 +1,10 @@
 import styles from './Contact.module.css';
 
 const links = [
-  { type: 'Email', value: 'nirmalbirsingh60@gmail.com', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=nirmalbirsingh60@gmail.com' },
-  { type: 'iMessage', value: '+1 778 598 2035', href: 'sms:+17785982035' },
-  { type: 'GitHub', value: 'github.com/Nirmalbirsingh', href: 'https://github.com/Nirmalbirsingh' },
+  { type: 'Call or text', value: '(778) 598-2035', href: 'tel:+17785982035' },
+  { type: 'Email', value: 'nirmalbirsingh60@gmail.com', href: 'mailto:nirmalbirsingh60@gmail.com?subject=Website%20quote' },
   { type: 'LinkedIn', value: 'linkedin.com/in/nirmal-bir-singh', href: 'https://linkedin.com/in/nirmal-bir-singh' },
+  { type: 'GitHub', value: 'github.com/Nirmalbirsingh', href: 'https://github.com/Nirmalbirsingh' },
 ];
 
 export default function Contact() {
@@ -21,9 +21,10 @@ export default function Contact() {
 
         <div className={styles.lower}>
           <p className={styles.desc}>
-            Based wherever good work is needed. I specialise in building
-            fast, focused websites and iOS apps for small businesses and
-            startups. If you have a clear goal, I can help you get there.
+            Based in Surrey, BC. I build fast, focused websites for small
+            businesses across the Lower Mainland — and work remotely with
+            clients anywhere. Tell me about your business and I'll get back
+            to you with a clear quote.
           </p>
 
           <div className={styles.linksList}>
@@ -32,7 +33,7 @@ export default function Contact() {
                 key={l.type}
                 href={l.href}
                 className={styles.contactLink}
-                target={l.href.startsWith('sms') ? undefined : '_blank'}
+                target={l.href.startsWith('http') ? '_blank' : undefined}
                 rel="noreferrer"
               >
                 <div className={styles.linkInner}>
